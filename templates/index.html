@@ -25,13 +25,15 @@
         <form autocomplete="off" action="https://www.google.com/search" method="get">
 				<table>
 					<thead><tr><th>
-						[LOGO FOR SITE YOU ARE SEARCHING]
+						<a href="https://weather.gov" target="_blank">
+							<img src="nws.svg" alt="National Weather Service" width="100" height="100">
+						</a>
 					</th></tr></thead>
 					<tbody>
 					<tr>
 						<td>
-            <input name="q" id="txtSearch" type="text" placeholder="PLACEHOLDER HERE" onkeyup="toggleButton()">
-						<input type="hidden" name="q" value="[SITE SEARCH]">
+            <input name="q" id="txtSearch" type="text" placeholder="Search Weather.gov" onkeyup="toggleButton()">
+						<input type="hidden" name="q" value="site:weather.gov">
             <input type="submit" disabled value="Search" name="btnSearch" id="btnSearch">
 						</td>
 					</tr>
@@ -39,7 +41,9 @@
 						<td class="footer"><img height="14px" src="static/leaf.png">&nbsp;&nbsp;Carbon neutral since 2023</td>
 					</tr>
 					<tr>
-						<td class="footer">[LINK TO SITE YOU ARE SEARCHING]
+						<td class="footer">
+							<a href="https://www.weather.gov/about/" target="_blank">
+								About the National Weather Service</a>
 						&nbsp;|&nbsp;<span id="date">[JAVASCRIPT DATE HERE]</span>
 						</td>
 					</tr>
