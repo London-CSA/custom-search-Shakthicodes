@@ -2,24 +2,25 @@
 
 <html lang="en">
     <head>
-        <title>[TITLE HERE]</title>
-		<link href="/static/style.css" rel="stylesheet"></head>
-		<script>
-			function toggleButton(){
-				if(document.getElementById("txtSearch").value == "")
-				{
-					document.getElementById("btnSearch").disabled = true;
-				}
-				else{
-					document.getElementById("btnSearch").disabled = false;
-				}
+        <title>Custom Search Weather.gov</title>
+	<link href="/static/style.css" rel="stylesheet">
+	<script src="script.js">
+		function toggleButton(){
+			if(document.getElementById("txtSearch").value == "")
+			{
+				document.getElementById("btnSearch").disabled = true;
 			}
+			else{
+				document.getElementById("btnSearch").disabled = false;
+			}
+		}
 
-			function getDate(){
-				// TBD display current date in the span tag with id="date" in web page footer
-				// hint: https://www.w3schools.com/js/tryit.asp?filename=tryjs_date_current
-			}
-		</script>
+		function getDate(){
+			const d = new Date();
+			document.getElementById("demo").innerHTML = d;
+		}
+	</script>
+    </head>
     <body onload="getDate()">
 			<div class="container">
         <form autocomplete="off" action="https://www.google.com/search" method="get">
